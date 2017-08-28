@@ -13,19 +13,21 @@ This task asks you to build a flask end-point that receives an unformatted addre
 Note: this is *not* a text cleaning exercise. The goal is not to convert "St." to "street" but instead to work within "the spirit of messiness". Below are some possible approaches that follow the spirit this problem was designed to present.
 
 ### Possible Approaches
-Here are two possible ways to find "approximate matches" that we feel can be quickly implemented and don't require any special understanding that can't be pulled off of Stack Exchange, Wikipedia, or other sites. You are more than welcome to come up with your own, but we aren't looking for that.
+Here are some possible ways steps you may find useful as you attempt to find "approximate matches" that we feel can be quickly implemented and don't require any special understanding that can't be pulled off of Stack Exchange, Wikipedia, or other sites. You are more than welcome to come up with your own, but we aren't looking for that.
 
-#### Scoring algorithms to find best matches
-There are many methods for measuring the distance between two strings. For instance, [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) [(code)](https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Java) calculates the minimum number of single-character edits required to convert one string to another. 
-This (or one of many other possible ways of describing the distance between two strings) could be used to compare either the entire incoming string to entire address strings from the loosely formatted address data set or you could attempt to do some parsing on the incoming string to compare it to the individual elements of the loosely formatted data set.
-The element with the highest score would be the best match. A well chosen cut-off for how high the score should be in order to report a match should be selected (for instance, if you store your scores in `match_score` you may choose to report a match only if `max(match_scores) > min_cutoff` where `min_cutoff` would be some value you choose based on the performance you see.
+#### Geocoding
+The incoming string can be edited, chopped, etc. You may find that sending the incoming string through Google's map API could help to clean up and standardize your inputs. You can find some useful code for this in the `snippets/` directory. 
 
 #### Fuzzy Matching
-Fuzzy matching is a technique used to match elements in cases where a 100% match is not required. Python has a good fuzzy matching library. 
+Fuzzy matching is a technique used to match elements in cases where a 100% match is not required. Python has a good fuzzy matching library. You can also find some useful code in `snippets/`
+
+#### Scoring algorithms to find best matches
+There are many methods for measuring the distance between two strings. For instance, [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) [(code)](https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Java) calculates the minimum number of single-character edits required to convert one string to another. This (or one of many other possible ways of describing the distance between two strings) could be used to compare either the entire incoming string to entire address strings from the loosely formatted address data set or you could attempt to do some parsing on the incoming string to compare it to the individual elements of the loosely formatted data set. The element with the highest score would be the best match. A well chosen cut-off for how high the score should be in order to report a match should be selected (for instance, if you store your scores in `match_score` you may choose to report a match only if `max(match_scores) > min_cutoff` where `min_cutoff` would be some value you choose based on the performance you see.
 
 ## Resources
 - A python file called `application.py` which when ran from the command line as `python application.py` should start a http server running flask. 
 - The set of addresses to be searched through for matches is stored in `data/`.
+- The code in `snippets/` may be of use in your project. Feel free to edit/incorporate them.
 
 ## What we are looking for
 Ideally, this should take three hours.
