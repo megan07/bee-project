@@ -1,0 +1,2 @@
+fuzzywuzzy==0.15.0
+geocoder==1.23.1
