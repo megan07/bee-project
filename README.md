@@ -1,6 +1,6 @@
 # Backend Engineer Project
 
-If you have any questions about these instructions, don't hesitate to [submit an issue on GitHub](https://github.com/structurely/bee-project/issues/new) - that is the fastest way to get a response from the appropriate person.
+If you have any questions about these instructions, don't hesitate to [submit an issue on GitHub](https://github.com/structurely/bee-project/issues/new) - that is the fastest way to get a response from the appropriate person. Ideally, this task should take about three hours.
 
 ## Scenario
 Real estate data has a tendency to be very messy. In this project, we will ask you to take an incoming address and determine if it does or does not "approximately match" an item in an existing data set. The reason I use "approximate match", and the reason that the problem of finding matching addresses is difficult, is because a person who searches for the address `1 2 Avenue, Mason City IA` is probably looking for the same address as the person searching for `1 2nd Ave, Mason City` or the person searching for a house on `Anadale Street` and the person searching for a house on `Annadale Lane` may be looking for the same thing.
@@ -31,7 +31,6 @@ You can find some useful code for geocoding and fuzzy matching in the `snippets/
 - The code in `snippets/` may be of use in your project. Feel free to edit/incorporate them.
 
 ## What we are looking for
-Ideally, this should take three hours.
 - This project should demonstrate a proficiency in python. 
 - The result should include a python file called `application.py` which when ran from the command line as `python application.py` starts a http server running flask. 
 - There should be a usage on multiple methods and modules to reuse code and to provide structure to the program. 
