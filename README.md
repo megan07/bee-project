@@ -10,7 +10,9 @@ Since we frequently deal with address strings that have misspellings, strange ab
 ## Task: Approximate Matching for Addresses
 In this repository you will find a folder called `data/` that contains a tab-delimited file, `us-addresses.tsv`. This file contains 50,000 addresses from around the United States. It is in the format used by one of our data sources. 
 
-This task asks you to build a flask end-point that receives an unformatted address as a character string, searches the `us-addresses` data set for an approximate match, and, if such a match is found, returns the matching address from the data set as a dictionary. 
+This task asks you to build a flask end-point that receives an unformatted address as a character string, searches the `us-addresses` data set for an approximate match, and, if such a match is found, returns the matching address from the data set as a dictionary.
+
+You should start by forking this repository, and then add all of your work as commits to this repo. When you are finished you can submit a pull request so that our team can review your work :)
 
 Note: this is *not* a text cleaning exercise. The goal is not to convert "St." to "street" but instead to work within "the spirit of messiness". Below are some possible approaches that follow the spirit this problem was designed to present.
 
@@ -37,3 +39,4 @@ You can find some useful code for geocoding and fuzzy matching in the `snippets/
 - All python requirements should be committed to the repo so that a program like pip could be used to install all necessary modules in the environment. 
 - Use of built in and popular python libraries is encouraged.
 - Efficiency of the program should be a concern. Include comments about how one could optimize the program further or how it is being optimized already. Optimizations could mean things like sorting a list to search through it faster and not making requests to resources more than necessary.
+- We'd also like to see frequent small Git commits with meaningful commit messages as opposed to a single large commit.
