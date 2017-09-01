@@ -9,7 +9,7 @@ from __future__ import division
 from __future__ import print_function
 
 from pprint import pprint
-import urllib
+import urllib.parse
 
 import requests
 
@@ -21,7 +21,7 @@ def build_url(**kwargs):
     """
     Helpers function for building the base url for calling the Geocoder API.
     """
-    encoded_params = urllib.urlencode(kwargs)
+    encoded_params = urllib.parse.urlencode(kwargs)
     encoded_string = "{}{}".format(BASE_URL, encoded_params)
     return encoded_string
 
